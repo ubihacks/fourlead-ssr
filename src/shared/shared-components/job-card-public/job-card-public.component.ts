@@ -48,7 +48,7 @@ export class JobCardPublicComponent extends AppComponentBase implements OnInit {
   ngOnInit(): void {
   }
 
-  refreshEm(){
+  refreshEm(): void{
     this.refresh.emit();
   }
 
@@ -123,7 +123,7 @@ export class JobCardPublicComponent extends AppComponentBase implements OnInit {
 
   }
 
-  bookmark(jobAdId: number) {
+  bookmark(jobAdId: number): void {
     if (this.userId) {
       this.bookmarkJobDto.jobAdId = jobAdId;
       this.bookmarkJobDto.userId = this.userId;
@@ -152,7 +152,7 @@ export class JobCardPublicComponent extends AppComponentBase implements OnInit {
 
   }
 
-  apply(jobAd: JobAdDto) {
+  apply(jobAd: JobAdDto): void {
     if (this.appSession.userId) {
       this.jobApplicationDto.jobAdId = jobAd.id;
       this.jobApplicationDto.tenantId = jobAd.company.id;
@@ -199,7 +199,7 @@ export class JobCardPublicComponent extends AppComponentBase implements OnInit {
     //   }
     // });
   }
-  deleteDraftJobAd(jobAd: JobAdDto) {
+  deleteDraftJobAd(jobAd: JobAdDto): void {
     this.swal.fire({
       title: 'Are you sure?',
       text: `Are you sure you want to job ad '${jobAd.jobTitle}'.`,

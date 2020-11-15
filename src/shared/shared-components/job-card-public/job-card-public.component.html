@@ -2,7 +2,7 @@
   <div class="job-title">
     <div class="job-title-wrap">
       <div class="job-title-left">
-        <a routerLink="/jobs/detail/{{jobAd.id}}" class="job-title-spec" routerLinkActive="router-link-active">
+        <a routerLink="/jobs/detail/{{jobAd.id}}" target="_blank" class="job-title-spec" routerLinkActive="router-link-active">
           <h3 *ngIf="!jobAd.jobTitle">{{jobAd.specializationName}},
             {{jobAd.position?.name}}</h3>
           <h3 *ngIf="jobAd.jobTitle">{{jobAd.jobTitle}} </h3>

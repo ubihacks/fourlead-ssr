@@ -1,0 +1,229 @@
+<app-header></app-header>
+<!-- Contant Start -->
+<div class="content bg-gray">
+  <div class="job-description">
+    <div class="container">
+      <div class="row custom-row">
+        <div class="col-lg-12 custom-col">
+          <div class="search-job bg-white search-job-radius ">
+
+            <ol class="breadcrumb">
+              <li [class.active]="this.jobAdSearchRequest.type === 'all'" class="breadcrumb-item"><img
+                  src="assets/images/job-icon.png" alt="">
+                <a [routerLink]="[ '/jobs/list', 'all' ]">Jobs</a>
+              </li>
+              <li *ngIf="userId" [class.active]="this.jobAdSearchRequest.type === 'applied'" class="breadcrumb-item  ">
+                <a [routerLink]="[ '/jobs/list', 'applied' ]">Applied
+                  Jobs</a></li>
+              <li *ngIf="userId" [class.active]="this.jobAdSearchRequest.type === 'bookmarked'" class="breadcrumb-item">
+                <a [routerLink]="[ '/jobs/list', 'bookmarked' ]">Bookmark Jobs</a></li>
+              <li *ngIf="userId" class="breadcrumb-item">
+                <a [routerLink]="[ '/user/user-interviews']">Interviews</a></li>
+            </ol>
+            <form [formGroup]="searchJobAdForm" novalidate>
+              <div class="search-bar">
+                <label for="">
+                  <input type="text" placeholder="Job Title or Company Name" type="text" formControlName="search"
+                    (keydown)="onKeydown($event)" #search>
+                  <i class="fa fa-search" aria-hidden="true" (click)="getJobAdsForUser()"> </i>
+                </label>
+                <!-- <a><img src="images/filter-icon.png" alt=""></a> -->
+              </div>
+              <ng-container *ngFor="let item of searchTags">
+                <span *ngIf="item.text" (click)="removeTag(item)" class="tag label label-default "><a>{{item.text}} <i
+                      class="fa fa-remove"></i></a>
+                </span>
+              </ng-container>
+
+              <div class="row filter-row">
+                <div class="col-lg-2 col-md-4 filter-wrap">
+                  <ng-select formControlName="location" (change)="changeLocationTag($event)" bindLabel="text"
+                    bindValue="text" [items]="statesDD" [placeholder]="'Location'" class="general-select">
+                  </ng-select>
+
+                </div>
+                <div class="col-lg-2 col-md-4 filter-wrap">
+                  <ng-select [items]="experienceRangeDD" bindLabel="text" (change)="changeExperienceTag($event)"
+                    bindValue="id" class="general-select" [hideSelected]="true" formControlName="experienceMax"
+                    [placeholder]="'Max. Experience'">
+                  </ng-select>
+                </div>
+                <div class="col-lg-2 col-md-4 filter-wrap">
+
+                  <input formControlName="salaryMin" (keydown)="onKeydown($event)" type="text"
+                    class="form-control salary-range-input" placeholder="Min. Salary Range" />
+                </div>
+                <div class="col-lg-2 col-md-4 filter-wrap">
+
+                  <ng-select [items]="positionDD" bindLabel="text" bindValue="id" [multiple]="true"
+                    (change)="changePositionTag($event)" class="general-select" formControlName="positionIds"
+                    [placeholder]="'Position'">
+
+                  </ng-select>
+
+                </div>
+                <div class="col-lg-2 col-md-4 filter-wrap">
+                  <ng-select [items]="behaviourDD" bindLabel="text" bindValue="value" class="general-select"
+                    (change)="changeBehaviourTag($event)" formControlName="behaviourIds" [multiple]="true"
+                    [placeholder]="'Behaviour'">
+
+                  </ng-select>
+                </div>
+
+                <div class="col-lg-2 col-md-4 filter-wrap">
+                  <ng-select [items]="employmentTypeDD" bindLabel="text" bindValue="value"
+                    (change)="changeEmploymentTypeTag($event)" class="general-select" [hideSelected]="true"
+                    formControlName="employmentTypeIds" [multiple]="true" [placeholder]="'Employment'">
+                  </ng-select>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-8 custom-col">
+          <div class="interested" style="z-index: 10;">
+            <div class="row">
+              <div class="col-md-9 col-sm-8 interested-jobs-heading">
+                <h3> Jobs you may be interested </h3>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <ng-select [(ngModel)]="jobAdSearchRequest.sorting" [ngModelOptions]="{standalone: true}"
+                  (change)="onSortChange($event)" class="general-select" [items]="sortByDD" [placeholder]="'Sort By'"
+                  bindLabel="text" bindValue="id">
+                </ng-select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Job ad Start -->
+          <div *ngIf="jobAds && !loading">
+
+            <div class="general-job bg-white" *ngFor="let item of (jobAds | paginate
+          : {
+              id: 'server',
+              itemsPerPage: pageSize,
+              currentPage: pageNumber,
+              totalItems: totalItems
+            })">
+
+<app-job-card-public [jobAd]="item" [jobAdSearchRequest]="jobAdSearchRequest" [apiBaseUrl]="apiBaseUrl" (refresh)="refresh()" [isPublic]="true"></app-job-card-public>
+
+
+
+            </div>
+
+            <!-- Job ad End -->
+            <!-- pagination -->
+
+            <div class="abp-pagination-controls-wrapper" *ngIf="totalItems > pageSize">
+              <abp-pagination-controls (pageChange)="getDataPage($event)" id="server">
+              </abp-pagination-controls>
+            </div>
+
+            <!-- pagination -->
+
+          </div>
+          <div class="general-job bg-white p-4" *ngIf="jobAds?.length==0 && !loading">
+            No jobs found!
+          </div>
+          <div class="mx-auto" *ngIf="loading">
+
+            <ngx-spinner class="mx-auto mt-4" [name]="'jobSpinner'" bdColor="rgba(241,241,241,0.3)" size="small"
+              color="#0a2545" type="ball-elastic-dots" [fullScreen]="false">
+              <p style="color: #0d2545"> Loading... </p>
+            </ngx-spinner>
+
+          </div>
+          <!-- Job ad End -->
+
+          <!-- Job ad Start -->
+
+
+
+
+
+
+        </div>
+
+        <div class="col-lg-4 custom-col">
+          <div class="user-detail  company-address promotion-banner task-overview">
+            <div class="user-personal">
+              <div *ngIf="userId">
+                <img *ngIf='!userProfileResult?.profileImage' src="assets/images/user-img.png" alt="">
+                <img  *ngIf='userProfileResult?.profileImage' src="{{apiBaseUrl}}/assets/images/user/{{userProfileResult.profileImage}}" alt="">
+
+                <h3>{{userProfileResult?.firstName}} {{userProfileResult?.lastName}}</h3>
+
+                <hr>
+                <ul class="recommended">
+                  <li><a [class.active]="this.jobAdSearchRequest.type === 'all'" [routerLink]="[ '/jobs/list','all' ]"
+                      routerLinkActive="active">Search New
+                      Jobs<span>{{userJobStatus.newJobCount}}</span></a> </li>
+                  <li [class.active]="this.jobAdSearchRequest.type === 'bookmarked'"><a
+                      [routerLink]="[ '/jobs/list', 'bookmarked' ]" routerLinkActive="active">Bookmarked
+                      Jobs<span>{{userJobStatus.bookmarkedJobCount}}</span></a> </li>
+                  <li [class.active]="this.jobAdSearchRequest.type === 'applied'"><a
+                      [routerLink]="[ '/jobs/list', 'applied' ]" routerLinkActive="active">Applied Jobs
+                      <span>{{userJobStatus.appliedJobCount}}</span></a> </li>
+                  <li><a [routerLink]="[ '/user/user-interviews' ]" routerLinkActive="active">Interviews
+                      Jobs<span>{{userJobStatus.interviewJobs}}</span></a> </li>
+                </ul>
+
+                <div class="company-office-view ">
+                  <a (click)="takeAssesment()">Take Assessment</a>
+                </div>
+              </div>
+              <div *ngIf="!userId" class="public-job-panel">
+                <img class="public-job-logo" src="../../../assets/images/logo-tag.svg" alt="">
+
+                <h4> EMPOWERING YOU TO MAKE SMATER<br>DECISIONS THROUGH TRANSPARENCY.</h4>
+
+
+                <div class="row justify-content-center">
+                  <div class="col col-lg-5 ">
+                    <img class="public-job-icon" src="assets/images/assessment.svg" alt="">
+                    <P>BEHAVIOUR<br>ASSESSMENTS</P>
+                  </div>
+                  <div class="col col-lg-2">
+                    <img class="public-job-icon-x" src="assets/images/x.svg" alt="">
+
+                  </div>
+                  <div class="col col-lg-5">
+                    <img class="public-job-icon" src="assets/images/culture.svg" alt="">
+                    <P>CULTURAL<br>INSIGHTS</P>
+                  </div>
+                </div>
+
+
+                <div class="company-office-view mt-4 ">
+                  <a href="https://fourlead.com/account/register">SIGNUP NOW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="promotion-banner chat-with-us">
+            <ul>
+              <li><a [routerLink]="['/about-us']">About us</a></li>
+              <li><a [routerLink]="['/contact-us']">Contact us</a></li>
+              <li><a [routerLink]="['/faqs']">FAQs</a></li>
+              <li><a [routerLink]="['/legal']">Legal</a></li>
+              <li><a [routerLink]="['/blog']">Blogs</a></li>
+              <li><a [routerLink]="['/pricing']">Pricing</a></li>
+            </ul>
+            <!-- <p>Have questions? <a>Chat </a> with us</p> -->
+            <div class="sidebar-copyright">
+              <img src="assets/images/logo.png" alt="">
+              <span>Agensi Pekerjaan Fourlead Sdn Bhd &copy; 2019-2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Contant End -->

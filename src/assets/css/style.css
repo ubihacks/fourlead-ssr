@@ -22438,3 +22438,8 @@ span.form-row .material-icons {
   display: inline-block;
   letter-spacing: 1px;
 }
+.ng-select .ng-clear-wrapper {
+    
+    margin: auto;
+
+}

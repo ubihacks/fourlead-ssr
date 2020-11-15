@@ -32,7 +32,12 @@
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {

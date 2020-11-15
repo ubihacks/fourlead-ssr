@@ -10,6 +10,8 @@ const routes: Routes = [
   { path: 'free-behaviour-assessment', component: FreeBehaviourAssessmentComponent },
   { path: 'about-us', component: AboutUsComponent },
 
+  { path: 'jobs', loadChildren: () => import('./jobs/jobs.module').then(m => m.JobsModule) },
+
 ];
 
 @NgModule({

@@ -1,0 +1,55 @@
+.public-job-logo{
+  width: 160px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-top: 50px !important;
+}
+
+.public-job-panel h4{
+
+  font-weight:600!important;
+  padding-top:35px;
+  padding-bottom: 50px;
+}
+.public-job-icon {
+  width: 50px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-bottom: 2px;
+}
+
+.public-job-icon-x {
+  width: 30px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-top:30px;
+
+}
+.tag {
+  padding-top: 0px !important;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.tag a {
+  font-size: 14px;
+  line-height: 38px;
+  color: #0A2545 !important;
+  height: 38px;
+  padding: 0 20px;
+  background: #DFDFDF;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 575px) {
+
+  .tag {
+    padding-top: 15px !important;
+    padding-bottom: 0px;
+    display: inline-block;
+  }
+
+}
+

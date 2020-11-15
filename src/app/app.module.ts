@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, ErrorHandler, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { AboutUsComponent } from './Landing/about-us/about-us.component';
 import { FreeBehaviourAssessmentComponent } from './Landing/free-behaviour-assessment/free-behaviour-assessment.component';
 import { JsonLdModule } from 'ngx-seo';
+import { GlobalErrorHandler } from 'src/shared/global-error-handler';
+import { AppConfigService } from 'src/shared/AppConfigService';
+import { httpInterceptorProviders } from 'src/shared/http-interceptors';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,19 @@ import { JsonLdModule } from 'ngx-seo';
   ],
   providers: [
 
-    SessionServiceProxy
+    SessionServiceProxy,
+    httpInterceptorProviders,
+    {
+      provide: APP_INITIALIZER,
+      multi: true,
+      deps: [AppConfigService],
+      useFactory: (appConfigService: AppConfigService) => {
+        return async () => {
+          return await appConfigService.loadAppConfig().then(s => appConfigService.loadLoginInfo() );
+        };
+      }
+    },
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
 
   ],
   bootstrap: [AppComponent]

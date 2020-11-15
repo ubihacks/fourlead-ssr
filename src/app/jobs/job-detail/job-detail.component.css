@@ -1,0 +1,78 @@
+.public-job-logo{
+  width: 160px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-top: 50px !important;
+}
+
+.public-job-panel h4{
+
+  font-weight:600!important;
+  padding-top:35px;
+  padding-bottom: 50px;
+}
+.public-job-icon {
+  width: 50px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-bottom: 2px;
+}
+
+.public-job-icon-x {
+  width: 30px !important;
+  border-radius: 0 !important;
+  height:auto !important;
+  padding-top:30px;
+
+}
+
+.apply-now h5{
+
+
+  font-weight:800!important;
+
+}
+
+.company-profile-main-setting-wrap .company-profile-main-setting .company-main-content {
+  padding-bottom: 16px;
+}
+
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-media li {
+  font-size: 25px;
+  list-style: none;
+  color: #0a2545;
+  padding: 0 10px;
+}
+.social-media .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+
+.social-share-title
+{
+text-align: center;
+font-weight:800;
+}
