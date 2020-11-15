@@ -1,10 +1,7 @@
-
 <!-- Contant Start -->
 <div class="content bg-gray">
   <div class="job-description">
-
-
-
+    
     <div class="company-profile-name-wrap">
       <div class="container">
 
@@ -16,7 +13,7 @@
           <div class="company-profile-name">
             <div class="company-profile-img-wrap">
               <div class="for-update-profile">
-                <img *ngIf="!jobAd.isConfidential" itemprop="logo"  [src]="profileImagePath">
+                <img *ngIf="!jobAd.isConfidential" itemprop="logo" [src]="profileImagePath">
                 <img *ngIf="jobAd.isConfidential" class="company-pro-img" src="assets/images/confidential.png" alt="">
               </div>
             </div>
@@ -28,10 +25,10 @@
       <div class="container">
 
         <div class="company-profile-des">
-          <div  *ngIf="!jobAd.isConfidential" itemprop="name" class="company-name">
+          <div *ngIf="!jobAd.isConfidential" itemprop="name" class="company-name">
             <a>{{company.name}}</a>
           </div>
-          <div  *ngIf="jobAd.isConfidential" class="company-name">
+          <div *ngIf="jobAd.isConfidential" class="company-name">
             <a>Confidential Company</a>
           </div>
           <div>
@@ -53,8 +50,8 @@
             <div class="company-profile-main-setting-wrap">
               <div class="job-description-wrap job-description-inner">
                 <div class="row custom-row p-0">
-                  <div  *ngIf="jobAd.isConfidential && jobAd.aboutConfidential" class="col-lg-12 custom-col">
-                    <div  class="company-profile-main-setting bg-white bg-white-radius">
+                  <div *ngIf="jobAd.isConfidential && jobAd.aboutConfidential" class="col-lg-12 custom-col">
+                    <div class="company-profile-main-setting bg-white bg-white-radius">
 
                       <div class="company-main-content company-profile-main-setting">
 
@@ -64,10 +61,10 @@
                     </div>
                   </div>
                   <div class="col-lg-12 custom-col">
-                    <div  class="company-profile-main-setting bg-white bg-white-radius">
-                      <div  class="company-main-content job-title-msg">
-                        <h4   *ngIf="jobAd.jobTitle" >{{jobAd.jobTitle}}</h4>
-                        <h4   *ngIf="!jobAd.jobTitle" >{{jobAd?.specialization?.name}}, {{jobAd?.position?.name}} </h4>
+                    <div class="company-profile-main-setting bg-white bg-white-radius">
+                      <div class="company-main-content job-title-msg">
+                        <h4 *ngIf="jobAd.jobTitle">{{jobAd.jobTitle}}</h4>
+                        <h4 *ngIf="!jobAd.jobTitle">{{jobAd?.specialization?.name}}, {{jobAd?.position?.name}} </h4>
                       </div>
                     </div>
                     <!-- <div  class="company-profile-main-setting bg-white bg-white-radius">
@@ -81,16 +78,16 @@
                     <div class="requirement">
 
                       <div class="company-profile-main-setting bg-white bg-white-radius">
-                        <div  class="company-main-content">
-                          <h4 >Job Description</h4>
+                        <div class="company-main-content">
+                          <h4>Job Description</h4>
                         </div>
                         <div itemprop="description" [innerHTML]='jobAd.description'></div>
                       </div>
 
-                      <div  class="company-profile-main-setting bg-white bg-white-radius">
+                      <div class="company-profile-main-setting bg-white bg-white-radius">
 
                         <div class="company-overview">
-                          <div  class="company-main-content">
+                          <div class="company-main-content">
                             <h4>Job Requirement</h4>
                           </div>
                           <h5>Education</h5>
@@ -121,7 +118,7 @@
                               </span>
                             </li>
                           </ul>
-                          <h5 *ngIf="jobAd?.jobAdBenefits?.length > 0" >Benefits</h5>
+                          <h5 *ngIf="jobAd?.jobAdBenefits?.length > 0">Benefits</h5>
                           <ul *ngFor="let s of jobAd.jobAdBenefits">
                             <li>{{s.benefitName}}
 
@@ -171,14 +168,15 @@
                           </li>
                           <li>
                             <h5>Industry</h5>
-                            <a *ngFor="let industry of company.companyIndustries" itemprop="industry" >{{industry.industry?.name}}</a>
+                            <a *ngFor="let industry of company.companyIndustries"
+                              itemprop="industry">{{industry.industry?.name}}</a>
                           </li>
                           <li>
                             <h5>Founded year</h5>
                             <a *ngIf="company.foundedYear">{{company.foundedYear| date:'yyyy'}}</a>
                           <li>
                             <h5>Working hour</h5>
-                            <a itemprop="workHours" >{{workingHours}}</a>
+                            <a itemprop="workHours">{{workingHours}}</a>
                           </li>
                           <li *ngIf="!jobAd.isConfidential">
                             <h5>Company registration no.</h5>
@@ -186,7 +184,8 @@
                           </li>
                           <li>
                             <h5>Business Sector </h5>
-                            <a *ngIf="company.businessSector" itemprop="occupationalCategory" >{{company.businessSector?.name}}</a>
+                            <a *ngIf="company.businessSector"
+                              itemprop="occupationalCategory">{{company.businessSector?.name}}</a>
                           </li>
                           <li>
                             <h5>Company size</h5>
@@ -194,9 +193,10 @@
                           </li>
                           <li>
                             <h5>Benefits</h5>
-                            <a *ngFor="let benefit of company.companyBenefits" itemprop="jobBenefits"> {{benefit?.benefit?.name}},&nbsp;</a>
+                            <a *ngFor="let benefit of company.companyBenefits" itemprop="jobBenefits">
+                              {{benefit?.benefit?.name}},&nbsp;</a>
                           </li>
-                          <li *ngIf="!jobAd.isConfidential" >
+                          <li *ngIf="!jobAd.isConfidential">
                             <h5>Website</h5>
                             <a>{{company?.webSite}}</a>
                           </li>
@@ -216,71 +216,71 @@
               then applyJob;
               else WithdrawJob
             ">
-          </ng-container>
+              </ng-container>
 
-          <ng-template #applyJob>
-            <div class="view-dashboard">
-              <a (click)="apply()">Apply Now</a>
+              <ng-template #applyJob>
+                <div class="view-dashboard">
+                  <a (click)="apply()">Apply Now</a>
+                </div>
+              </ng-template>
+
+              <ng-template #WithdrawJob>
+                <div class="view-dashboard">
+                  <a (click)="delete(jobAd)">Withdraw</a>
+                </div>
+
+              </ng-template>
+
             </div>
-          </ng-template>
+            <div *ngIf="!userId">
+              <div class="view-dashboard">
+                <a [routerLink]="['/account/login']">Login to Apply</a>
+              </div>
 
-          <ng-template #WithdrawJob>
-            <div class="view-dashboard">
-              <a (click)="delete(jobAd)">Withdraw</a>
             </div>
-
-          </ng-template>
-
-      </div>
-      <div *ngIf="!userId">
-        <div class="view-dashboard">
-          <a [routerLink]="['/account/login']">Login to Apply</a>
-        </div>
-
-      </div>
-          <h3 class='text-center font-weight-bold mt-1 mb-1'>Share With Friends</h3>
+            <h3 class='text-center font-weight-bold mt-1 mb-1'>Share With Friends</h3>
 
 
-          <ul class="social-media">
-            <li (click)="sochialShare('facebook')"><i class="fa fa-facebook"></i></li>
-            <li (click)="sochialShare('twitter')"><i class="fa fa-twitter"></i></li>
-            <li (click)="sochialShare('linkedin')"><i class="fa fa-linkedin"></i></li>
+            <ul class="social-media">
+              <li (click)="sochialShare('facebook')"><i class="fa fa-facebook"></i></li>
+              <li (click)="sochialShare('twitter')"><i class="fa fa-twitter"></i></li>
+              <li (click)="sochialShare('linkedin')"><i class="fa fa-linkedin"></i></li>
 
-            <li class="p-2" cdkCopyToClipboard="https://fourlead.com/free-behaviour-assessment"><i
-                class="fa fa-link "></i>
-              <span class="tooltiptext">Click to Copy Link</span></li>
-          </ul>
-
-
-        <div class="promotion-banner apply-now  ">
-
-          <h5>Employment type</h5>
-          <p >{{jobAd?.employmentType?.name}}</p>
+              <li class="p-2" cdkCopyToClipboard="https://fourlead.com/free-behaviour-assessment"><i
+                  class="fa fa-link "></i>
+                <span class="tooltiptext">Click to Copy Link</span></li>
+            </ul>
 
 
-          <h5>Experience</h5>
-          <p>{{jobAd?.workExperienceFrom}}-{{jobAd?.workExperienceTo}} years </p>
+            <div class="promotion-banner apply-now  ">
+
+              <h5>Employment type</h5>
+              <p>{{jobAd?.employmentType?.name}}</p>
 
 
-          <h5 *ngIf="jobAd.jobAdBehaviours?.length > 0">Behaviour demand</h5>
-          <span *ngFor="let jb of jobAd.jobAdBehaviours">
-            {{jb.behaviour?.name| slice:0:1}},
-          </span>
+              <h5>Experience</h5>
+              <p>{{jobAd?.workExperienceFrom}}-{{jobAd?.workExperienceTo}} years </p>
 
-          <h5>Salary Range </h5>
 
-          <p> <span *ngIf="jobAd?.salaryRangeFrom" itemprop="salaryCurrency" >MYR
-            <span  *ngIf="jobAd?.salaryRangeFrom" itemprop="baseSalary" > - {{jobAd?.salaryRangeTo}}</span>
-              <span *ngIf="jobAd?.salaryRangeTo"> - {{jobAd?.salaryRangeTo}}</span></span>
-            <span *ngIf="!jobAd?.salaryRangeFrom">Undisclosed</span>
-          </p>
+              <h5 *ngIf="jobAd.jobAdBehaviours?.length > 0">Behaviour demand</h5>
+              <span *ngFor="let jb of jobAd.jobAdBehaviours">
+                {{jb.behaviour?.name| slice:0:1}},
+              </span>
 
-          <h5>Location </h5>
+              <h5>Salary Range </h5>
 
-          <p>{{jobAd?.city}},{{jobAd?.state}}  </p>
-          <h5>Job ID </h5>
-          <p>{{jobAd?.identifier}} </p>
-        </div>
+              <p> <span *ngIf="jobAd?.salaryRangeFrom" itemprop="salaryCurrency">MYR
+                  <span *ngIf="jobAd?.salaryRangeFrom" itemprop="baseSalary"> - {{jobAd?.salaryRangeTo}}</span>
+                  <span *ngIf="jobAd?.salaryRangeTo"> - {{jobAd?.salaryRangeTo}}</span></span>
+                <span *ngIf="!jobAd?.salaryRangeFrom">Undisclosed</span>
+              </p>
+
+              <h5>Location </h5>
+
+              <p>{{jobAd?.city}},{{jobAd?.state}} </p>
+              <h5>Job ID </h5>
+              <p>{{jobAd?.identifier}} </p>
+            </div>
 
             <div class="promotion-banner chat-with-us">
               <ul>
@@ -289,76 +289,12 @@
                 <li><a [routerLink]="['/faqs']">FAQs</a></li>
                 <li><a [routerLink]="['/legal']">Legal</a></li>
                 <li><a [routerLink]="['/blog']">Blogs</a></li>
-                <li><a [routerLink]="['/pricing']" >Pricing</a></li>
+                <li><a [routerLink]="['/pricing']">Pricing</a></li>
               </ul>
               <!-- <p>Have questions? <a>Chat </a> with us</p> -->
               <div class="sidebar-copyright">
                 <img src="assets/images/logo.png" alt="">
                 <span>Agensi Pekerjaan Fourlead Sdn Bhd &copy; 2019</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal fade fourlead-permium" id="get-permium" tabindex="-1" role="dialog"
-          aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="upgrade-premium">
-                  <div class="upgrade-premium-inner">
-                    <h3>Upgrade to fourlead Premium</h3>
-                    <p>Unlock the potential for greater career growth and smarter decision making.</p>
-                  </div>
-                </div>
-                <div class="upgrade-premium-content">
-                  <div class="upgrade-premium-list">
-                    <img src="assets/images/priority-search.png" alt="">
-                    <div class="upgrade-premium-inner-content">
-                      <h6>Priority Search</h6>
-                      <p>Be on the top list when hiring managers and recruiters are searching for talents. You never
-                        know
-                        might knock on your doorstep.</p>
-                    </div>
-                  </div>
-                  <div class="upgrade-premium-list">
-                    <img src="assets/images/sticky-note.png" alt="">
-                    <div class="upgrade-premium-inner-content">
-                      <h6>Sticky Note</h6>
-                      <p>Not getting respond for your application? Get noticed by attaching a sticky note on your
-                        application. It also shows that you have more interest in getting the job.</p>
-                    </div>
-                  </div>
-                  <div class="upgrade-premium-list">
-                    <img src="assets/images/who-saved.png" alt="">
-                    <div class="upgrade-premium-inner-content">
-                      <h6>Who’ Saved</h6>
-                      <p>Get to know which company has interest in hiring you. Be prepared in advance to receive a call
-                        or an email. A little research would do good impression in answering the call.</p>
-                    </div>
-                  </div>
-                  <div class="upgrade-premium-list">
-                    <img src="assets/images/premium-discount.png" alt="">
-                    <div class="upgrade-premium-inner-content">
-                      <h6>Premium Discount</h6>
-                      <p>Enrol yourself in any course available at a discounted rate as a Premium member. Upgrade
-                        yourself with different skills and knowledge.</p>
-                    </div>
-                  </div>
-                  <div class="upgrade-premium-list">
-                    <img src="assets/images/important-insights.png" alt="">
-                    <div class="upgrade-premium-inner-content">
-                      <h6>Important Insights</h6>
-                      <p>Take a deeper look at the company’s office politics and the workplace flexibility. This
-                        insights could be your decisive factors.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="free-trial-wrap">
-                  <a>Start your 30-day free trial</a>
-                </div>
               </div>
             </div>
           </div>
