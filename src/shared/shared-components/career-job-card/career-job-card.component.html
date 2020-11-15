@@ -1,0 +1,168 @@
+<div class="jobs-des job-detail job-pdng more-job-dscription interested-jobs">
+  <div class="job-title">
+    <div class="job-title-wrap">
+      <div class="job-title-left">
+        <a routerLink="/microsites/{{companySlug}}/job/{{jobAd.id}}"  target='_blank' class="job-title-spec" routerLinkActive="router-link-active">
+          <h3 *ngIf="!jobAd.jobTitle">{{jobAd.specializationName}},
+            {{jobAd.position?.name}}</h3>
+          <h3 *ngIf="jobAd.jobTitle">{{jobAd.jobTitle}} </h3>
+        </a>
+
+        <div *ngIf="!jobAd.isConfidential" class="company-date-wrap">
+          <a class="company-name-wrap"
+            routerLink="/company/public/{{jobAd?.company?.companySlug}}">{{jobAd.company?.name}}</a>
+        </div>
+        <div *ngIf="jobAd.isConfidential" class="company-date-wrap">
+          <a class="company-name-wrap">Confidential Company</a>
+        </div>
+        <span>{{jobAd.employmentType?.name}} | {{jobAd.creationTime| date:'dd MMM yyyy'}}</span>
+
+      </div>
+      <div class="job-title-right">
+        <img *ngIf="jobAd.isConfidential" class="company-pro-img" src="assets/images/confidential.png" alt="">
+        <img *ngIf="!jobAd.isConfidential" class="company-pro-img" src="{{apiBaseUrl}}{{jobAd.companyLogo}}" alt="">
+        <div class="dropdown job-btn-wrap">
+          <button class="btn dropdown-toggle job-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="assets/images/dots.png" alt="">
+          </button>
+          <ng-container *ngIf="isPublic then public; else compnay">
+          </ng-container>
+          <ng-template #public>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" routerLink="/microsites/{{companySlug}}/job/{{jobAd.id}}" target='_blank'
+                routerLinkActive="router-link-active">Details</a>
+              <ng-container *ngIf="this.jobAdSearchRequest.type === 'bookmarked' then unbookmarked; else bookmarked">
+              </ng-container>
+              <ng-template #bookmarked>
+                <a *ngIf="userId" class="dropdown-item" (click)="bookmark(jobAd.id)">Bookmark</a>
+              </ng-template>
+              <ng-template #unbookmarked>
+                <a class="dropdown-item" (click)="removeBookmark(jobAd)">Remove</a>
+
+              </ng-template>
+
+
+              <a class="dropdown-item" *ngIf="this.jobAdSearchRequest.type !== 'applied'" (click)="apply(jobAd)">Apply
+                Job</a>
+              <a class="dropdown-item" *ngIf="this.jobAdSearchRequest.type === 'applied'"
+                (click)="withdraw(jobAd)">Withdraw</a>
+            </div>
+          </ng-template>
+          <ng-template #compnay>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a *ngIf="this.jobAdSearchRequest.type === 'draft'" class="dropdown-item"
+                  (click)="showEditJobAdDialog(jobAd.id)">
+                  Edit</a>
+                  <a class="dropdown-item" routerLink="/microsites/{{companySlug}}/job/{{jobAd.id}}" target='_blank'
+                  routerLinkActive="router-link-active">Details</a>
+
+                <a class="dropdown-item" *ngIf="this.jobAdSearchRequest.type !== 'active'"
+                  (click)="deleteDraftJobAd(jobAd)">Delete</a>
+                <a class="dropdown-item" *ngIf=" (this.jobAdSearchRequest.type !== 'completed') && (this.jobAdSearchRequest.type !== 'draft')
+                  " (click)="markJobAsComplete(jobAd)">
+                  Mark as Complete</a>
+
+                <a *ngIf="this.jobAdSearchRequest.type === 'active'" class="dropdown-item"
+                  (click)="showEditJobAdDialog(jobAd.id)">
+                  Edit</a>
+                <a class="dropdown-item" *ngIf="
+                    this.jobAdSearchRequest.type === 'completed'
+                  " (click)="showEditJobAdDialog(jobAd.id)">
+                  Re-post</a>
+                <a class="dropdown-item" *ngIf="this.jobAdSearchRequest.type === 'expired'"
+                  (click)="showEditJobAdDialog(jobAd.id)">
+                  Re-post</a>
+              </div>
+
+
+          </ng-template>
+
+        </div>
+        <!-- <img src="assets/images/dots.png" alt="" (click)="bookmark(jobAd.id)"> -->
+      </div>
+    </div>
+    <p class="job-des-wrap" style="-webkit-box-orient: vertical;">{{jobAd.title}} </p>
+    <ul class=" educatianal-data-warp">
+
+      <li style="-webkit-box-orient: vertical;">
+        <img src="assets/images/education.svg" alt="">
+        <ng-container *ngFor="let q of jobAd.qualifications ; last as isLast">
+          <span class="ml-2">{{q.qualification.name}}<span *ngIf="!isLast">,</span></span>
+        </ng-container>
+
+      </li>
+      <li style="-webkit-box-orient: vertical;">
+        <img src="assets/images/language.svg" alt="">
+        <ng-container *ngFor="let sk of jobAd.jobAdSkills | jobsLanguageFilter; last as isLast">
+          <span class="ml-2">{{sk?.skillName}} <span *ngIf="!isLast">,</span> </span>
+        </ng-container>
+      </li>
+      <li style="-webkit-box-orient: vertical;" *ngIf='isFoundHardSkill(jobAd.jobAdSkills)'>
+        <img src="assets/images/hardskill.svg" alt="">
+
+        <span class="ml-2" *ngFor="let skill of jobAd.jobAdSkills  | jobsHardSkillsFilter; last as isLast">{{skill?.skillName}}<span *ngIf="!isLast">,</span></span>
+      </li>
+      <li *ngIf='isFoundSoftSkill(jobAd.jobAdSkills)'>
+        <img src="assets/images/softskill.svg" alt="">
+        <ng-container *ngFor="let sk of jobAd.jobAdSkills  | jobsSoftSkillsFilter; last as isLast">
+          <span class="ml-2">{{sk?.skillName}}<span *ngIf="!isLast">,</span></span>
+        </ng-container>
+
+      </li>
+
+    </ul>
+    <hr>
+    <div class="row more-des-icon">
+      <div class="address">
+        <div class="icons">
+          <img src="assets/images/location.svg" alt="">
+        </div>
+        <span
+          *ngIf="!jobAd.city && jobAd.companyOffice?.address?.split(',')?.reverse()[2]">{{jobAd.companyOffice?.address?.split(",")?.reverse()[2]}},
+        </span>
+        <span *ngIf="!jobAd.city">{{jobAd.companyOffice?.address?.split(",")?.reverse()[1]}}</span>
+        <span *ngIf="jobAd?.city?.length > 0">{{jobAd.city.trim()}},&nbsp;</span>
+        <span> {{jobAd.state}}</span>
+      </div>
+      <div class="address">
+        <div class="icons">
+          <img src="assets/images/salary.svg" alt="">
+
+        </div>
+        <span *ngIf="jobAd.salaryRangeFrom">MYR {{jobAd.salaryRangeFrom}}
+          <span *ngIf="jobAd.salaryRangeTo"> - {{jobAd.salaryRangeTo}}</span></span>
+        <span *ngIf="!jobAd.salaryRangeFrom">Undisclosed</span>
+
+      </div>
+
+      <div class="address">
+        <div class="icons">
+          <img src="assets/images/experience.svg" alt="">
+        </div>
+        <span>{{jobAd.workExperienceFrom}}-{{jobAd.workExperienceTo}} years</span>
+      </div>
+      <div class="address" *ngIf="jobAd.jobAdBehaviours?.length>0">
+        <div class="icons">
+          <img src="assets/images/behaviour.svg" alt="">
+        </div>
+        <span *ngFor="let jb of jobAd.jobAdBehaviours ; last as isLast">
+          {{jb.behaviour.name| slice:0:1}}<span *ngIf="!isLast">,</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="job-overview-wrap" *ngIf="companyView">
+  <p>Created by: {{ jobAd?.creatorUser?.name }}</p>
+  <p routerLink="/company/job-applicants/{{
+    jobAd.id
+      }}/allapplicants" target="_blank" routerLinkActive="active">
+    {{ jobAd?.jobApplicants }}
+    Applicants
+  </p>
+  <p>{{ jobAd?.views }} Views</p>
+  <p *ngIf="this.jobAdSearchRequest.type === 'active'">
+    Expired in {{ jobAd?.expiryInDays }} days
+  </p>
+</div>

@@ -1,0 +1,32 @@
+{
+  "remoteServiceBaseUrl": "https://api.fourlead.com/",
+  "appBaseUrl": "http://localhost:4200",
+  "connectedAppUrl": "http://localhost:3000",
+  "authentication": {
+    "facebook": {
+      "isEnabled": "true",
+      "appId": "1343068382519370",
+      "appSecret": "5a31f1a3093f8c632f15e7b80aa28c9f"
+    },
+    "google": {
+      "isEnabled": "true",
+      "appId": "878975048544-9nktku6o0ansoilt2tkdrdrheavmbr2k.apps.googleusercontent.com",
+      "appSecret": "X21-ngGmZTQlLaWzvcS6D3_T"
+    }
+  },
+  "isContactConfirmationEnabled": "false",
+  "localeMappings": [
+    {
+      "from": "pt-BR",
+      "to": "pt"
+    },
+    {
+      "from": "zh-CN",
+      "to": "zh"
+    },
+    {
+      "from": "he-IL",
+      "to": "he"
+    }
+  ]
+}

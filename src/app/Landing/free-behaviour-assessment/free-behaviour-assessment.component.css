@@ -1,0 +1,401 @@
+@media only screen and (min-width: 320px) {
+
+  .find-out-carrer-wrap .test-banner-right.personal-right h2 {
+    font-size: 25px;
+  }
+
+  .free-behaviour-assessment {
+    padding: 28px 0px;
+  }
+
+  .find-out-carrer-wrap .test-banner-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .free-behaviour-action {
+
+    font-size: 13px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .assessment-selections {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .find-out-carrer-wrap .test-banner-right a {
+
+    color: #fff !important;
+    background: #0a2545;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 8px;
+    font-size: 17px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+
+
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+
+    border-radius: 25px;
+    width: 120px;
+    height: 130px;
+    padding: 12px 10px 12px;
+
+  }
+
+  .about-behaviour-test-col {
+    width: 42%;
+    padding-right: 13px;
+    padding-left: 5px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test h6 {
+    font-size: 18px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner img {
+    width: 44px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test p {
+    font-size: 14px;
+  }
+
+  /* .upgrade-premium-list img {
+  margin-right: 15px;
+  width: 60px;
+  height: 60px;
+} */
+
+}
+
+@media only screen and (min-width: 375px) {
+
+  .find-out-carrer-wrap .test-banner-right.personal-right h2 {
+    font-size: 25px;
+  }
+
+  .free-behaviour-assessment {
+    padding: 28px 0px;
+  }
+
+  .find-out-carrer-wrap .test-banner-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .assessment-selections {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .find-out-carrer-wrap .test-banner-right a {
+
+    color: #fff !important;
+    background: #0a2545;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 8px;
+    font-size: 17px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+
+
+  }
+
+  .free-behaviour-action {
+
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+
+    border-radius: 25px;
+    width: 150px;
+    height: 150px;
+    padding: 12px 10px 12px;
+
+  }
+
+  .about-behaviour-test-col {
+    width: 45%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test h6 {
+    font-size: 18px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner img {
+    width: 50px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test p {
+    font-size: 15px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 480px) {
+
+  .find-out-carrer-wrap .test-banner-right.personal-right h2 {
+    font-size: 25px;
+  }
+
+  .free-behaviour-assessment {
+    padding: 28px 0px;
+  }
+
+  .find-out-carrer-wrap .test-banner-right {
+    /* width: 65%; */
+    margin: 0 auto;
+  }
+
+  .find-out-carrer-wrap .test-banner-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+
+    border-radius: 25px;
+    width: 150px;
+    height: 150px;
+    padding: 12px 10px 12px;
+
+  }
+
+  .upgrade-premium-list {
+    display: flex;
+  }
+  .assessment-selections {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .find-out-carrer-wrap .test-banner-right a {
+
+    color: #fff !important;
+    background: #0a2545;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 8px;
+    font-size: 17px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+
+
+  }
+
+}
+
+@media only screen and (min-width: 575px) {
+
+  .find-out-carrer-wrap .test-banner-right.personal-right h2 {
+    font-size: 35px;
+  }
+
+  .free-behaviour-assessment {
+    padding: 28px 0px;
+  }
+
+  .assessment-selections {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .find-out-carrer-wrap .test-banner-right a {
+
+    color: #fff !important;
+    background: #0a2545;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 25px;
+    margin: 8px;
+    font-size: 17px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+
+
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablets: */
+
+  .about-behaviour-test-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+  }
+
+  .find-out-carrer-wrap .test-banner-right.personal-right h2 {
+    font-size: 38px;
+    padding-top: 20px;
+  }
+
+  .free-behaviour-assessment {
+    padding: 28px 0px;
+  }
+
+  .find-out-carrer-wrap .test-banner-right {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+    border-radius: 35px;
+    width: 210px;
+    height: 195px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test h6 {
+    font-size: 22px;
+
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner img {
+    width: 60px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test p {
+    font-size: 21px;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  /* For tablets: */
+
+  .about-behaviour-test-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+
+
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+    border-radius: 35px;
+    width: 210px;
+    height: 195px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test h6 {
+    font-size: 22px;
+
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner img {
+    width: 88px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test p {
+    font-size: 21px;
+  }
+
+}
+
+@media only screen and (min-width: 1199px) {
+  /* For tablets: */
+
+
+  .about-behaviour-test-col {
+    flex: 0 0 20%;
+    max-width: 20%;
+
+  }
+
+  .assessment-selections {
+
+    justify-content: center;
+  }
+
+  .find-out-carrer-wrap .test-banner-right a {
+    font-size: 20px;
+    color: #fff !important;
+    background: #0a2545;
+    text-transform: uppercase;
+    font-weight: 400;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 90px;
+    border-radius: 25px;
+    margin: 15px;
+
+  }
+
+  .free-behaviour-assessment {
+    padding: 80px;
+  }
+
+  .free-behaviour-action {
+    font-size: 22px;
+
+  }
+
+  .free-behaviour-action span {
+    text-decoration: underline
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner {
+    border-radius: 35px;
+    width: 210px;
+    height: 195px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test h6 {
+    font-size: 22px;
+
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test .about-behaviour-test-inner img {
+    width: 55px;
+  }
+
+  .benefit-of-bahaviour.about-behaviour-test p {
+    font-size: 20px;
+  }
+
+}

@@ -1,0 +1,406 @@
+.banner-box-wrap {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.fourlead-content-wraper {
+  padding: 30px 80px 25px;
+}
+
+.banner-advantages-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.banner-advantages-video-wrap video {
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 0.313rem 0.625rem 0 rgba(0, 0, 0, .25);
+  width: 100%;
+}
+
+.banner-advantages-content .sec-heading {
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 38px;
+}
+
+.banner-advantages-content .main-para {
+  text-align: left;
+}
+
+/* banner box  */
+
+/* we beleive transparency */
+.main-beleive-transparency {
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px 70px;
+}
+
+.main-three-misfit {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+
+.three-misfit-heading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding-left: 100px;
+}
+
+.three-misfit-heading.three-misfit-inner {
+  min-height: 100%;
+}
+
+.three-misfit-heading h5 {
+  position: absolute;
+  transform: rotate(270deg);
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 600;
+  left: -120px;
+}
+
+.three-misfit-inner h6 {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.three-misfit-inner p {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 0px 0px 20px;
+}
+
+/* we beleive transparency */
+
+/* three misfit */
+.main-address-misfit {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 80px 70px;
+}
+
+.address-misfit-inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px 30px;
+  justify-content: center;
+}
+
+.address-misfit-content h5 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.address-misfit-content p {
+  font-size: 18px;
+  font-weight: normal;
+
+  padding: 0px 0px 20px;
+}
+
+/* Address the three misfit */
+
+/*-_-_Responsiveness_-_-*/
+
+@media only screen and (max-width: 1600px) {
+  .fourlead-content-wraper {
+    padding: 70px 50px 0;
+  }
+}
+
+@media only screen and (max-width: 1440px) {}
+
+@media only screen and (max-width: 1367px) {
+  .fourlead-content-wraper {
+    padding: 60px 30px 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {
+
+  /*We beleive transparency  */
+  .main-beleive-transparency h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .main-beleive-transparency p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* three misfit */
+
+  .main-three-misfit {
+    flex-direction: column-reverse;
+  }
+
+  /* Address the three misfit */
+  .main-address-misfit h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .main-address-misfit p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* Fourlead gives you the insider */
+  .main-the-insider h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  .main-the-insider p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* main-discover-jobs */
+  .main-discover-jobs {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {}
+
+@media only screen and (max-width: 575px) {
+  .banner-advantages-wrap {
+    padding: 0px;
+  }
+
+  .banner-advantages-content .sec-heading {
+    padding: 0px;
+  }
+
+  .fourlead-content-wraper {
+    padding: 15px;
+  }
+
+  .main-beleive-transparency {
+    padding: 0px;
+  }
+
+  /* Here is your result */
+  .main-your-result-heading h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .main-your-result-heading p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* discover jobs */
+  .main-discover-jobs p {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  /*We beleive transparency  */
+  .main-beleive-transparency h2 {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 0px;
+    text-align: left;
+  }
+
+  .main-beleive-transparency p {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  /* Address the three misfit */
+  .main-address-misfit h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: left;
+    padding: 0px;
+  }
+
+  .main-address-misfit p {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .address-misfit-content h5 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .address-misfit-content p {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0 0 15px;
+  }
+
+  /* Fourlead gives you the insider */
+  .main-the-insider h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .main-the-insider p {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  /* Fourlead empower */
+  .main-discover-jobs h3 {
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  /* Three Main misfit  */
+  .main-three-misfit {
+    padding: 30px 0px 0px;
+  }
+
+  .three-misfit-heading {
+    padding-left: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+  }
+
+  .three-misfit-heading h5 {
+    left: -170px;
+  }
+
+  .three-misfit-inner h6 {
+    font-size: 18px;
+  }
+
+  .three-misfit-inner p {
+    font-size: 14px;
+  }
+
+  .address-misfit-inner {
+    padding: 20px 0px 0px;
+  }
+
+  .workplace-behaviour-content.companies {
+    min-height: auto;
+  }
+
+  .main-address-misfit {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .address-misfit-inner {
+    padding: 20px 0px 0px;
+  }
+}
+
+@media only screen and (max-width: 320px) {}
+
+.address-misfit-inner {
+  padding: 20px 0px 0px;
+}
+
+.grades-popup-modal .modal-body .close {
+
+  color: white;
+
+}
+
+.resume-competition-modal-btn {
+
+
+  text-align: center;
+  margin-top: -80px;
+}
+
+.resume-competition-modal-btn a {
+    color: #0d2545;
+    background: #fff;
+    padding: 16px 45px;
+    font-size: 16px;
+    border-radius: 31px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 300ms ease-in;
+
+  }
+
+  .grades-popup-modal .modal-dialog {
+    max-width: 550px;
+
+}
+
+@media only screen and (max-width: 1440px){
+.card, .modal-content {
+    border: none;
+}
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border:none;
+    border-radius: .3rem;
+    outline: 0;
+}
+
+
+@media only screen and (max-width:575px) {
+
+
+.resume-competition-modal-btn {
+
+
+  text-align: center;
+  margin-top: -50px;
+}
+
+  .resume-competition-modal-btn a {
+    color: #0d2545;
+    background: #fff;
+    padding: 8px 20px;
+    font-size: 12px;
+    border-radius: 31px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: all 300ms ease-in;
+  }
+
+
+}
+

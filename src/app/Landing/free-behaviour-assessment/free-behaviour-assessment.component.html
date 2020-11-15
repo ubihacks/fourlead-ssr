@@ -1,0 +1,126 @@
+<!-- Header Start -->
+<app-header></app-header>
+<!-- Header Start -->
+
+
+
+  <!-- Banner Start -->
+  <div class="banner free-behaviour-assessment our-banner-carrer">
+
+    <div class="container" style="margin: auto;">
+      <div class="find-out-carrer-wrap">
+        <div class="test-banner-right personal-right">
+          <h2>Free behavioural Assessment</h2>
+          <p>personality &ne; behaviour</p>
+          <div class="row assessment-selections">
+            <a (click)="startFresh()" >I am a Fresh Grad</a>
+            <a (click)="startExperienced()" >I am Experienced</a>
+          </div>
+
+        </div>
+        <div class="free-behaviour-action">
+          <a>Want to assess your candidates? <span  data-target="#get-permium" data-toggle="modal">Learn more</span></a>
+        </div>
+      </div>
+      <div class="benefit-of-bahaviour about-behaviour-test">
+        <div class="row about-behaviour-test-row justify-content-center">
+          <div class="col-lg-3 col-md-6 about-behaviour-test-col">
+            <div class="about-behaviour-test-inner pink-bg">
+              <h6>QUICK</h6>
+              <img src="assets/images/clock.svg" alt="">
+              <p>Take around <br> 6 mins</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 about-behaviour-test-col">
+            <div class="about-behaviour-test-inner yellow-bg">
+              <h6>INSTANT</h6>
+              <img src="assets/images/flash.svg" alt="">
+              <p>Immediate <br> result</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 about-behaviour-test-col">
+            <div class="about-behaviour-test-inner green-bg">
+              <h6>PROVEN</h6>
+              <img src="assets/images/workplace.svg" alt="">
+              <p>Proven and tested model</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 about-behaviour-test-col">
+            <div class="about-behaviour-test-inner blue-bg">
+              <h6>FRIENDLY</h6>
+              <img src="assets/images/pie-chart.svg" alt="">
+              <p>Friendly <br> Reports</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+  <!-- Banner End -->
+
+<!-- footer Start -->
+<app-footer></app-footer>
+<!-- footer end  -->
+
+
+  <div class="modal fade fourlead-permium" id="get-permium" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="upgrade-premium">
+          <div class="upgrade-premium-inner">
+            <h3>SIGN UP FOR MORE BENEFITS</h3>
+          </div>
+        </div>
+        <div class="upgrade-premium-content">
+          <div class="upgrade-premium-list">
+            <img src="assets/images/notes.svg" alt="">
+            <div class="upgrade-premium-inner-content">
+              <h6>FREE SIGN UP</h6>
+              <p>It is absolutely free to sign up. No hidden cost.
+                Company registration is subject for approval.</p>
+            </div>
+          </div>
+          <div class="upgrade-premium-list">
+            <img src="assets/images/forever.svg" alt="">
+            <div class="upgrade-premium-inner-content">
+              <h6>UNLIMITED INVITES</h6>
+              <p>As an employer, you can invite as many
+                candidates as possible. Utilise this powerful
+                assessment tool to the fullest!</p>
+            </div>
+          </div>
+          <div class="upgrade-premium-list">
+            <img src="assets/images/track.svg" alt="">
+            <div class="upgrade-premium-inner-content">
+              <h6>TRACK RESPONSES</h6>
+              <p>You can view and track their results and date
+                taken from the assessment page. No more
+                manual work!</p>
+            </div>
+          </div>
+          <div class="upgrade-premium-list">
+            <img src="assets/images/gold.svg" alt="">
+            <div class="upgrade-premium-inner-content">
+              <h6>FREE JOB CREDITS</h6>
+              <p>In Fourlead, you can post jobs with behavioural
+                demands as the requirement. You have 10,000
+                free credits to try!</p>
+            </div>
+          </div>
+        </div>
+        <div class="free-trial-wrap">
+          <a jobAd [routerLink] ="['/account/register']" data-dismiss="modal" aria-label="Close" >Sign Up Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
