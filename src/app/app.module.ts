@@ -24,7 +24,7 @@ import { httpInterceptorProviders } from 'src/shared/http-interceptors';
     FreeBehaviourAssessmentComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule,
     BrowserAnimationsModule ,
