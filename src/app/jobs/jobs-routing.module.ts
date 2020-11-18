@@ -6,8 +6,8 @@ import { JobDetailComponent } from './job-detail/job-detail.component';
 import { PublicJobsListComponent } from './public-jobs-list/public-jobs-list.component';
 
 const routes: Routes = [
-  { path: 'list/:type', component: PublicJobsListComponent},
-  { path: 'list', component: PublicJobsListComponent },
+  { path: '', component: PublicJobsListComponent },
+  { path: ':type', component: PublicJobsListComponent},
   { path: 'detail/:id', component: JobDetailComponent },
 ];
 
