@@ -23,6 +23,7 @@ import { AppConfigService } from 'src/shared/AppConfigService';
 import { httpInterceptorProviders } from 'src/shared/http-interceptors';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserStateInterceptor } from 'src/shared/http-interceptors/browserstateinterceptor';
+import { AssessmentProxyService } from 'src/shared/proxies/assessment-proxy.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BrowserStateInterceptor } from 'src/shared/http-interceptors/browsersta
     ToastrModule.forRoot(),
   ],
   providers: [
+    AssessmentProxyService,
     SessionServiceProxy,
     httpInterceptorProviders,
     {

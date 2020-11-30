@@ -1,0 +1,152 @@
+
+ul li {
+  list-style-type: none;
+}
+
+/* blog-one */
+article {
+  max-width: 900px;
+  margin: 10px auto 10px;
+}
+
+.main-social-media {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+.author {
+  display: flex;
+  padding: 10px 4px 10px;
+}.author a {
+  color: black;
+  font-weight: 600;
+}
+.author img {
+  border-radius: 50%;
+  display: block;
+  height: 4rem;
+  margin-right: 1rem;
+  width: 4rem;
+  margin-top: 0px;
+}
+.author-details {
+  padding: 10px 0px 0px;
+}
+.soical-link {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 0px  0px auto;
+}
+.soical-link li {
+  padding: 0px 5px;
+}
+.soical-link {
+  padding-top: 0;
+}
+.soical-link li a {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #0A2545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
+}
+.soical-link li:first-child {
+  padding-left: 0px;
+}
+.soical-link li a:hover {
+  background: #0A2545;
+  border: 1px solid #fff;
+}
+.soical-link li a:hover i {
+  color: #fff;
+}
+.soical-link li a i {
+  color: #0A2545;
+  font-size: 18px;
+}
+.content .blog-content-inner-wrap h2 {
+  text-align: left;
+  font-size: 26px;
+  padding: 10px 0px;
+}
+
+.blog-inner-warp .inner-blog-img-wrap img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* responsives*/
+@media all and (max-width: 767px){
+article{
+  margin-top: 40px;
+}
+.main-title h1 {
+  font-size: 32px;
+  padding-bottom: 5px;
+}
+p{
+  font-size: 18px;
+  line-height: 30px;
+}
+.content .blog-content-inner-wrap h2 {
+  font-size: 22px;
+  padding: 10px 0px;
+}
+}
+@media all and (max-width: 375px){
+article{
+  margin-top: 20px;
+}
+.main-title h1 {
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+p{
+  font-size: 15px;
+  line-height: 28px;
+}
+span {
+  font-size: 12px !important;
+}
+.author a {
+  font-size: 10px;
+}
+.author img {
+  height: 3rem;
+  width: 3rem;
+  margin-top: 10px;
+}
+.soical-link li a {
+  width: 20px;
+  height: 20px;
+}
+.soical-link li a i {
+  font-size: 10px;
+}
+.content .blog-content-inner-wrap h2 {
+  font-size: 22px !important;
+  padding: 10px 0px;
+}
+}
+@media all and (max-width: 320px){
+article{
+  margin-top: 20px;
+}
+.main-title h1 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+p{
+  font-size: 12px;
+  line-height: 22px;
+}
+.content .blog-content-inner-wrap h2 {
+  font-size: 19px !important;
+  padding: 10px 0px;
+}
+}

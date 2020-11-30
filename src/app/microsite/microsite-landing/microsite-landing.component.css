@@ -1,0 +1,668 @@
+.header-wrap.main-header .navbar,
+.headerlight .navbar {
+  padding: 15px 0 !important;
+}
+/* banner start */
+.career-banner {
+  margin: 0px 10px;
+  padding: 10px 10px 40px 10px;
+}
+.career-banner-wrap {
+  width: 50%;
+  justify-content: flex-end;
+}
+.career-banner-wrap h1 {
+  font-size: 52px !important;
+  font-weight:700;
+}
+
+.career-banner-wrap span {
+  font-size: 18px;
+  vertical-align: super;
+  font-weight: 400;
+}
+
+.career-banner-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.career-banner-img img {
+  max-width: 60% ;
+}
+.mobile-career-banner-img img{
+  display: none;
+}
+/* banner start */
+
+/* our career pages */
+.our-career-pages {
+  padding: 50px 0px;
+  color: #0D2545;
+}
+.our-career-pages h2 {
+  font-size: 44px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  text-align: left !important;
+}
+.our-career-pages p {
+  font-size: 21px;
+  font-weight: 500;
+}
+.our-career-pages-inner {
+  justify-content: center;
+  margin: auto;
+}
+.our-career-pages-inner .career-pages-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px 0px;
+  margin: 25px 0px;
+}
+.career-pages-content .career-pages-detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.career-pages-detail h3 {
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 6px;
+}
+.career-pages-detail span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.career-pages-content img {
+  max-width: 100%;
+}
+/* our career pages */
+
+/* our career examples start */
+.main-our-career {
+  padding: 50px 0px 0px;
+  color:#0D2545;
+}
+.main-our-career h2 {
+  font-size: 44px;
+  font-weight: 800;
+  padding-bottom: 10px;
+  text-align: left !important;
+}
+.main-our-career p {
+  font-size: 21px;
+  font-weight: 500;
+}
+.main-our-career-inner {
+  padding: 40px 0px;
+  text-align: right;
+}
+.main-our-career-inner h3 {
+  font-size: 25px;
+  font-weight: 800;
+  font-size: 30px;
+}
+.main-our-career-inner h3 img {
+  height: 70px;
+}
+.main-our-career-inner .our-career-content {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto;
+  width: 100%;
+  padding-bottom: 90px;
+}
+
+.main-our-career-inner .career-type-two {
+  background-image: url("../../../assets/images/career-background-two.svg");
+}
+.main-our-career-inner .career-type-three {
+  background-image: url("../../../assets/images/career-background-three.svg");
+}
+.our-career-content .our-career-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+  margin: 30px 0px 0px;
+}
+.career-type-down {
+  padding-top: 70px;
+}
+.our-career-content-inner h4 {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.our-career-content-inner img {
+  max-width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* our career examples start */
+
+/* Dont miss out potential start */
+.main-potential {
+  padding: 40px 10px 0px;
+  color: white;
+  background-color: #0D2545;
+}
+.main-potential h2 {
+  font-size: 28px;
+  padding-bottom: 8px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.main-potential .main-potential-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+}
+.main-potential-inner .potential-card {
+  padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #0d2545;
+    border-radius: 10px;
+    min-height: 215px;
+    margin-bottom: 40px;
+    box-shadow: 0 19px 38px rgba(0,0,0,.3), 0 15px 12px rgba(0,0,0,.22);
+}
+.potential-card img {
+  height: 90px;
+  padding-bottom: 15px;
+}
+.potential-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+.potential-card p {
+  font-size: 14px;
+  font-weight: 400;
+}
+/* Dont miss out potential start */
+
+/* Contact form start  */
+.contact-information {
+  text-align: left;
+  color: #000;
+  padding: 40px 0;
+}
+.contact-information h2{
+  text-align: left !important;
+  font-size: 20px;
+  font-weight: 800;
+  padding-left: 15px;
+}
+.contact-information .contact-information-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  text-align: left;
+}
+.contact-information-inner .our-career-pages h2 {
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+.contact-information-inner .form-control {
+  padding: 6px 12px;
+  font-size: 18px;
+  color: #0a2545;
+  width: 100%;
+  border: 1px solid #0a2545;
+  border-radius: 5px;
+  display: inline-block;
+}
+.contact-information-inner .contact-bt {
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background-color: #0a2545;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+}
+/* Contact form start  */
+
+/*-_-_Responsiveness_-_-*/
+
+@media only screen and (max-width: 1750px) {
+/*BANNER START  */
+.career-banner .career-banner-wrap h1 {
+  font-size: 50px !important;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 30px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 30px;
+}
+/* our career examples start */
+}
+
+@media only screen and (max-width: 1600px) {
+  /*BANNER START  */
+  .career-banner .career-banner-wrap h1 {
+    font-size: 40px !important;
+  }
+
+  }
+
+@media only screen and (max-width: 1400px) {
+/*BANNER START  */
+.banner .banner-wrap .banner-content {
+  width: 530px;
+
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 30px !important;
+  padding-right:0px;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 40px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 40px;
+}
+/* our career examples start */
+}
+@media only screen and (max-width: 1367px) {
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 26px;
+}
+.our-career-pages p {
+  font-size: 18px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 26px;
+}
+.main-our-career p {
+  font-size: 20px;
+}
+/* our career examples start */
+}
+
+@media only screen and (max-width: 1199px) {
+/*BANNER START  */
+.banner .banner-wrap .banner-content {
+  max-width : 530px;
+}
+
+.career-banner .career-banner-wrap h1 {
+  font-size: 30px !important;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 25px;
+}
+.our-career-pages p {
+  font-size: 18px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 25px;
+}
+.main-our-career p {
+  font-size: 18px;
+}
+/* our career examples start */
+/* our career examples start */
+.main-our-career-inner .our-career-content {
+  padding-bottom: 140px;
+}
+.main-our-career-inner .career-type-one {
+  padding-top: 70px;
+}
+/* our career examples start */
+}
+@media only screen and (max-width: 991px) {
+/*BANNER START  */
+.career-banner .career-banner-wrap h1 {
+  font-size: 23px !important;
+}
+/*BANNER START  */
+/* our career pages */
+.career-pages-reverse {
+  display: flex;
+  flex-direction: column-reverse !important;
+}
+.our-career-pages-inner .career-pages-content {
+  padding: 30px 0px 0px;
+}
+.our-career-pages h2 {
+  font-size: 18px;
+}
+.our-career-pages p {
+  font-size: 16px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career {
+  padding: 0px 0px 0px;
+}
+.main-our-career-inner .our-career-content {
+  background-image: none;
+}
+.main-our-career h2 {
+  font-size: 25px;
+}
+.main-our-career p {
+  font-size: 16px;
+}
+/* our career examples start */
+/* Dont miss out potential start */
+.potential-card p {
+  font-size: 16px;
+}
+/* Dont miss out potential start */
+/* Contact form start  */
+.contact-information-inner .form-control {
+  margin-bottom: 30px;
+}
+/* Contact form start  */
+}
+@media only screen and (max-width: 767px) {
+/*BANNER START  */
+
+
+.career-banner {
+  height: 20%;
+ padding: 0px;
+}
+.career-banner-wrap {
+  position: none;
+
+  width: 100%;
+  justify-content: center;
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 30px !important;
+}
+.banner .banner-wrap .banner-content p {
+  display: inline;
+}
+.career-banner-img {
+  width: 100%;
+  display: none;
+}
+.mobile-career-banner-img {
+  text-align: center;
+}
+.mobile-career-banner-img img{
+  max-width: 70%;
+  display: inline;
+  margin: 40px auto;
+}
+.career-banner-img img {
+  max-width: 80% ;
+
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages {
+  padding: 50px 15px 0px 15px;
+
+}
+.our-career-pages h1 {
+  font-size: 25px;
+}
+.career-pages-detail h3 {
+  font-size: 20px;
+}
+.our-career-pages p {
+  font-size: 16px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career{
+  padding: 50px 15px 0px 15px;
+
+}
+.main-our-career h2 {
+  font-size: 25px;
+}
+.main-our-career p {
+  font-size: 16px;
+}
+.main-our-career-inner h3 {
+  font-size: 22px;
+}
+.main-our-career-inner h3 img {
+  height: 60px;
+}
+.career-type-down {
+  padding-top: 0px;
+}
+.main-our-career-inner .our-career-content {
+  padding-bottom: 40px;
+}
+.our-career-content-inner {
+  margin-bottom: 40px;
+}
+/* our career examples start */
+/* Dont miss out potential start */
+.main-potential h2 {
+  font-size: 20px;
+}
+.potential-card p {
+  font-size: 16px;
+}
+/* Dont miss out potential start */
+/* Contact form start  */
+.contact-information-inner .form-control {
+  margin-bottom: 30px;
+}
+/* Contact form start  */
+}
+@media only screen and (max-width: 575px) {
+/*BANNER START  */
+.career-banner-wrap {
+  width: 100%;
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 28px !important;
+  padding-bottom: 20px;
+}
+.career-banner-img {
+  width: 100%;
+}
+.career-banner-img img {
+  max-width: 60% ;
+}
+
+/*BANNER START  */
+}
+@media only screen and (max-width: 480px) {
+/*BANNER START  */
+.career-banner-wrap {
+  width: 100%;
+}
+.career-banner .banner-content {
+  padding: 45px 0px 0px 0px !important;
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 20px !important;
+}
+.career-banner-img {
+  width: 100%;
+}
+.career-banner-img img {
+  max-width: 45% ;
+}
+.mobile-career-banner-img img{
+  margin: 0px auto;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 18px !important;
+  padding: 10px 0px;
+
+}
+.career-pages-detail h3 {
+  font-size: 16px;
+}
+.our-career-pages p {
+  font-size: 12px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 18px !important;
+  padding: 10px 0px;
+}
+.main-our-career p {
+  font-size: 12px;
+}
+.main-our-career-inner h3 {
+  font-size: 15px;
+}
+.main-our-career-inner h3 img {
+  height: 35px;
+}
+.our-career-content-inner h4 {
+  font-size: 15px;
+}
+/* our career examples start */
+/* Dont miss out potential start */
+.main-potential h2 {
+  font-size: 18px;
+}
+/* Dont miss out potential start */
+}
+@media only screen and (max-width: 375px) {
+/*BANNER START  */
+.career-banner-wrap {
+  width: 94%;
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 22px !important;
+}
+.career-banner-img {
+  width: 100%;
+}
+.career-banner-img img {
+  max-width: 40% ;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 16px !important;
+  padding-left: 0px !important;
+}
+.career-pages-detail h3 {
+  font-size: 12px;
+}
+.our-career-pages p {
+  font-size: 10px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 16px !important;
+  padding-left: 0px !important;
+}
+.main-our-career p {
+  font-size: 10px;
+}
+.main-our-career-inner h3 {
+  font-size: 12px;
+}
+.main-our-career-inner h3 img {
+  height: 30px;
+}
+.our-career-content-inner h4 {
+  font-size: 12px;
+}
+/* our career examples start */
+/* Dont miss out potential start */
+.main-potential h2 {
+  font-size: 12px;
+}
+/* Dont miss out potential start */
+/* Contact form start  */
+.contact-information h2{
+  font-size: 15px;
+}
+/* Contact form start  */
+}
+@media only screen and (max-width: 320px) {
+/*BANNER START  */
+.career-banner-wrap {
+  width: 95%;
+}
+.career-banner .career-banner-wrap h1 {
+  font-size: 20px !important;
+}
+.career-banner-img {
+  width: 100%;
+}
+.career-banner-img img {
+  max-width: 35% ;
+}
+/*BANNER START  */
+/* our career pages */
+.our-career-pages h2 {
+  font-size: 14px !important;
+}
+.career-pages-detail h3 {
+  font-size: 10px;
+}
+.our-career-pages p {
+  font-size: 8px;
+}
+/* our career pages */
+/* our career examples start */
+.main-our-career h2 {
+  font-size: 14px !important;
+}
+.main-our-career p {
+  font-size: 8px;
+}
+.main-our-career-inner h3 {
+  font-size: 10px;
+}
+.main-our-career-inner h3 img {
+  height: 25px;
+}
+.our-career-content-inner h4 {
+  font-size: 10px;
+}
+/* our career examples start */
+/* Dont miss out potential start */
+.main-potential h2 {
+  font-size: 10px;
+}
+/* Dont miss out potential start */
+/* Contact form start  */
+.contact-information h2{
+  font-size: 12px;
+}
+/* Contact form start  */
+}

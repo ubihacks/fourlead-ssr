@@ -1,21 +1,19 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 import { JsonLdService } from 'ngx-seo';
 import { AppComponentBase } from 'src/shared/app-component.base';
 import { SeoService } from 'src/shared/seo/seo.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-hire-right-employees',
+  templateUrl: './hire-right-employees.component.html',
+  styleUrls: ['../blog-detail.css']
 })
-export class HomeComponent extends AppComponentBase implements OnInit {
+export class HireRightEmployeesComponent extends AppComponentBase implements OnInit {
 
-
-  pageTitle = 'Fourlead – A smarter job portal with behavioural assessment ';
+  pageTitle = 'How to Use Your Organisational Culture to Hire the Right Employees.';
   pageKeywords = 'personality test,Jobs in malaysia,career building. Best job portal in malaysia,LinkedIn,jobs,behaviour assessment,pre employment, company culture,organisation culture,workplace culture,office politics,';
-  pageDescription = 'Fourlead empowers you to make smarter decisions through transparency. Discover jobs that suit your workplace behavioural style. Sign up now for free!';
+  pageDescription = 'you have heard a lot about the importance of hiring the right employee (yay), and you are zeroed in on getting the best man for the job. How do you make your hiring more efficient and accurate without overshooting your recruitment budget (or wearing out your HR manager with your motivational';
 
 
 
@@ -24,7 +22,7 @@ export class HomeComponent extends AppComponentBase implements OnInit {
     injector: Injector,
     private seo: SeoService,
     private readonly jsonLdService: JsonLdService,
-    private router: Router
+
   ) {
     super(injector);
 
@@ -48,27 +46,8 @@ export class HomeComponent extends AppComponentBase implements OnInit {
   }
   ngOnInit(): void {
 
-
-
-    // this.spinner.show();
-
-    // if (this.appSession.userId) {
-
-    //   setTimeout(() => {
-    //     this.router.navigate(['/user/user-main']);
-    //     this.spinner.hide();
-
-    //   }, 100);
-    // }
-    // else {
-
-    //   this.spinner.hide();
-
-
-    // }
   }
 
 
 
 }
-

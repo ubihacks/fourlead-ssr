@@ -109,7 +109,7 @@ export class JobDetailComponent extends AppComponentBase implements OnInit {
   ngOnInit(): void {
 
     this.getJobAdDetail();
-    this.href = this.router.url;
+   
 
   }
 

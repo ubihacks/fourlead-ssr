@@ -15,12 +15,19 @@
               <a class="nav-link" [routerLink]="['']" routerLinkActive="active">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/jobs']">Jobs</a>
+              <a class="nav-link" [routerLink]="['/jobs/list/all']">Jobs</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="['/microsite']" >Career Microsite</a>
+                <a class="dropdown-item"[routerLink]="['/free-behaviour-assessment']">Behaviour Assessment</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link" [routerLink]="['/free-behaviour-assessment']" routerLinkActive="active">Behaviour
                 Assessment</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" [routerLink]="['/blog']" routerLinkActive="active">blog</a>
             </li>
