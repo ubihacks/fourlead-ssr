@@ -24,6 +24,7 @@ import { httpInterceptorProviders } from 'src/shared/http-interceptors';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserStateInterceptor } from 'src/shared/http-interceptors/browserstateinterceptor';
 import { AssessmentProxyService } from 'src/shared/proxies/assessment-proxy.service';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AssessmentProxyService } from 'src/shared/proxies/assessment-proxy.serv
     BrowserAnimationsModule,
     HttpClientModule,
     JsonLdModule,
+    CommonModule,
     ToastrModule.forRoot(),
   ],
   providers: [

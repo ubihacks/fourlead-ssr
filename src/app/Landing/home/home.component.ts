@@ -11,13 +11,9 @@ import { SeoService } from 'src/shared/seo/seo.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent extends AppComponentBase implements OnInit {
-
-
   pageTitle = 'Fourlead – A smarter job portal with behavioural assessment ';
   pageKeywords = 'personality test,Jobs in malaysia,career building. Best job portal in malaysia,LinkedIn,jobs,behaviour assessment,pre employment, company culture,organisation culture,workplace culture,office politics,';
   pageDescription = 'Fourlead empowers you to make smarter decisions through transparency. Discover jobs that suit your workplace behavioural style. Sign up now for free!';
-
-
 
   constructor(
     private metaTagService: Meta,
@@ -32,43 +28,17 @@ export class HomeComponent extends AppComponentBase implements OnInit {
       title: this.pageTitle,
       description: this.pageDescription,
       keywords: this.pageKeywords,
-      image: 'assets/images/free-behavour-assessment.png',
+      image: 'assets/images/free-behavour-assessment.png'
     });
-    this.metaTagService.addTags([
-      { name: 'robots', content: 'index, follow' },
-    ]);
+    this.metaTagService.addTags([{ name: 'robots', content: 'index, follow' }]);
 
     const jsonLdObject = this.jsonLdService.getObject('Website', {
       name: 'Fourlead',
-      url: 'http://fourlead.com/',
+      url: 'http://fourlead.com/'
     });
     this.jsonLdService.setData(jsonLdObject);
-
-
   }
   ngOnInit(): void {
-
-
-
-    // this.spinner.show();
-
-    // if (this.appSession.userId) {
-
-    //   setTimeout(() => {
-    //     this.router.navigate(['/user/user-main']);
-    //     this.spinner.hide();
-
-    //   }, 100);
-    // }
-    // else {
-
-    //   this.spinner.hide();
-
-
-    // }
+    
   }
-
-
-
 }
-
